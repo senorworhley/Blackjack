@@ -15,3 +15,11 @@ sum = firstCard + secondCard;
 console.log("First Card: " + firstCard);
 console.log("Second Card: " + secondCard);
 console.log("Sum: " + sum);
+
+if (sum < 21) {
+  console.log("Do you want to draw a new card?");
+} else if (sum === 21) {
+  console.log("Blackjack! You win!");
+} else {
+  console.log("Bust! You lose!");
+}
