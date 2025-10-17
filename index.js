@@ -1,6 +1,8 @@
 let firstCard, secondCard;
 let sum;
 let hasBlackjack = false;
+let isAlive = true;
+let message = "";
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -18,12 +20,16 @@ console.log("Second Card: " + secondCard);
 console.log("Sum: " + sum);
 
 if (sum <= 20) {
-  console.log("Do you want to draw a new card?");
+  message = "Do you want to draw a new card?";
+  console.log(message);
 } else if (sum === 21) {
-  console.log("Blackjack! You win!");
+  message = "Blackjack! You win!";
   hasBlackjack = true;
 } else {
-  console.log("Bust! You lose!");
+  message = "Bust! You lose!";
+  isAlive = false;
 }
 
+console.log(message);
 console.log(hasBlackjack);
+console.log(isAlive);
